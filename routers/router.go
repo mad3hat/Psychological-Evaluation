@@ -89,12 +89,6 @@ func init() {
 			),
 		),
 
-		beego.NSNamespace("/sessions",
-			beego.NSInclude(
-				&controllers.SessionsController{},
-			),
-		),
-
 		beego.NSNamespace("/users",
 			beego.NSInclude(
 				&controllers.UsersController{},

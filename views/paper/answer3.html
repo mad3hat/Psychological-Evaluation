@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>心理测评网</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/v1/index">
+            <i class="fas fa-anchor"></i>
+        </a>
+        <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/v1/index">首页
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/v1/test">心理测评</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/v1/reading">拓展阅读</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">更多</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="/v1/login">切换账号</a>
+                        <a class="dropdown-item" href="/v1/about">关于本站</a>
+                    </div>
+                </li>
+            </ul>
+            <form action="/v1/myinfo" method="get">
+                <button type="submit" style="float: right;color: grey;text-decoration-line: none;border: none;background-color:rgba(253, 253, 253, 0)">我的信息</button>
+            </form>
+        </div>
+    </nav>
+    <br>
+    <br>
+
+    <div class="container">
+        <h3>您的测评结果如下：</h3>
+        <p>C.你最真实的一面是感性</p>
+        <p>感性人表达能力强，想象空间大，因此常胡思乱想而变得多愁善感，容易沉醉在罗曼蒂克与甜言蜜语中，对爱情总是既期待又怕受伤，常无厘头又莫名地对号入坐。个性属于优柔寡断型，通常不顾现实只跟着感觉走，让人猜不着他的想法与思考逻辑。</p>
+        <hr>
+        <br>
+        <b>请您为本次答案评分：</b>
+        <div class="btn-group">
+            <button type="button" class="btn btn-default" id="1" onclick="document.getElementById('1').style.backgroundColor='#007bff'">1</button>
+            <button type="button" class="btn btn-default" id="2" onclick="document.getElementById('2').style.backgroundColor='#007bff'">2</button>
+            <button type="button" class="btn btn-default" id="3" onclick="document.getElementById('3').style.backgroundColor='#007bff'">3</button>
+            <button type="button" class="btn btn-default" id="4" onclick="document.getElementById('4').style.backgroundColor='#007bff'">4</button>
+            <button type="button" class="btn btn-default" id="5" onclick="document.getElementById('5').style.backgroundColor='#007bff'">5</button>
+        </div>
+        <br>
+        <br>
+        <form action="/v1/index" method="get">
+            <button type="submit" class="btn btn-primary">确定</button>
+        </form>
+    </div>
+
+
+    <br>
+    <br>
+    <hr>
+    <footer>
+        <div class="container">
+            <div class="row clearfix">
+                <div class="list-group" style="width: 50%;border-left: 1px solid gray;padding-left: 15px">
+                    <p>友情链接：</p>
+                    <a href="{{.url1}}" style="color: gray">{{.link1}}</a>
+                    <a href="{{.url2}}" style="color: gray">{{.link2}}</a>
+                    <a href="{{.url3}}" style="color: gray">{{.link3}}</a>
+                </div>
+                <div class="list-group" style="width: 50%;border-left: 1px solid gray;padding-left: 15px">
+                    <p>热门推荐：</p>
+                    <a href="{{.url4}}" style="color: gray">{{.link4}}</a>
+                    <a href="{{.url5}}" style="color: gray">{{.link5}}</a>
+                    <a href="{{.url6}}" style="color: gray">{{.link6}}</a>
+                </div>
+            </div>
+            <hr>
+            <div class="author" style="line-height:1.8;text-align:center;padding:50px 0;color:#999;">
+                Based on:
+                <a href="http://beego.me">beego.me</a> / Created by:
+                <a href="https://github.com/mad3hat">madhat</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

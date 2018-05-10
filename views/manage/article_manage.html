@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>心理测评网</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="nav nav-tabs nav-stacked">
+        <a class="nav-link" href="/v1/users">用户管理</a>
+        <a class="nav-link active" href="/v1/articles">文章管理</a>
+        <a class="nav-link" href="/v1/questions">试题管理</a>
+        <a class="nav-link" href="/v1/resources">资源管理</a>
+        <a class="nav-link" href="/v1/posts">问答管理</a>
+        <a class="nav-link" href="/v1/logout">退出登陆</a>
+    </nav>
+    <br>
+    <br>
+
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>标题</th>
+                    <th>管理</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{range .Article}}
+                <tr>
+                    <td scope="row">{{.Topic}}</td>
+                    <td>
+                        <form action="/v1/changearticle" method="get" style="display: inline-block">
+                            <input type="hidden" name="Id" id="Id" value="{{.Id}}">
+                            <button type="submit" class="btn btn-primary">修改</button>
+                        </form>
+                        <form action="/v1/articles" method="post" style="display: inline-block">
+                            <input type="hidden" name="Id" id="Id" value="{{.Id}}">
+                            <button type="submit" class="btn btn-danger">删除</button>
+                        </form>
+                    </td>
+                </tr>
+                {{end}}
+            </tbody>
+        </table>
+        <br>
+        <div class="container" style="width: 50%">
+            <form action="/v1/addarticle" method="get">
+                <button type="submit" style="width: 100%" class="btn btn-primary">添加文章</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <br>
+    <b></b>
+    <hr>
+    <footer>
+        <div class="container">
+            <div class="row clearfix">
+                <div class="list-group" style="width: 50%;border-left: 1px solid gray;padding-left: 15px">
+                    <p>友情链接：</p>
+                    <a href="{{.url1}}" style="color: gray">{{.link1}}</a>
+                    <a href="{{.url2}}" style="color: gray">{{.link2}}</a>
+                    <a href="{{.url3}}" style="color: gray">{{.link3}}</a>
+                </div>
+                <div class="list-group" style="width: 50%;border-left: 1px solid gray;padding-left: 15px">
+                    <p>热门推荐：</p>
+                    <a href="{{.url4}}" style="color: gray">{{.link4}}</a>
+                    <a href="{{.url5}}" style="color: gray">{{.link5}}</a>
+                    <a href="{{.url6}}" style="color: gray">{{.link6}}</a>
+                </div>
+            </div>
+            <hr>
+            <div class="author" style="line-height:1.8;text-align:center;padding:50px 0;color:#999;">
+                Based on:
+                <a href="http://beego.me">beego.me</a> / Created by:
+                <a href="https://github.com/mad3hat">madhat</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

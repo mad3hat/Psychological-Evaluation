@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>心理测评网</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="/index">
+            <i class="fas fa-anchor" style="color: white"></i>
+        </a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/v1/index">首页</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#section1">{{.Topic0}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#section2">{{.Topic1}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#section3">{{.Topic2}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#section4">{{.Topic3}}</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="section1" class="container-fluid bg-success" style="padding-top:70px;padding-bottom:70px">
+        <br>
+        <br>
+        <h1>{{.Topic0}}</h1>
+        <br>
+        <pre style="white-space: pre-wrap">{{.Body0}}</pre>
+    </div>
+    <div id="section2" class="container-fluid bg-warning" style="padding-top:70px;padding-bottom:70px">
+        <h1>{{.Topic1}}</h1>
+        <br>
+        <pre style="white-space: pre-wrap">{{.Body1}}</pre>
+    </div>
+    <div id="section3" class="container-fluid bg-secondary" style="padding-top:70px;padding-bottom:70px">
+        <h1>{{.Topic2}}</h1>
+        <br>
+        <pre style="white-space: pre-wrap">{{.Body2}}</pre>
+    </div>
+    <div id="section4" class="container-fluid bg-danger" style="padding-top:70px;padding-bottom:70px">
+        <h1>{{.Topic3}}</h1>
+        <br>
+        <pre style="white-space: pre-wrap">{{.Body3}}</pre>
+    </div>
+
+
+    <br>
+    <br>
+    <hr>
+    <footer>
+        <div class="container">
+            <div class="row clearfix">
+                <div class="list-group" style="width: 50%;border-left: 1px solid gray;padding-left: 15px">
+                    <p>友情链接：</p>
+                    <a href="{{.url1}}" style="color: gray">{{.link1}}</a>
+                    <a href="{{.url2}}" style="color: gray">{{.link2}}</a>
+                    <a href="{{.url3}}" style="color: gray">{{.link3}}</a>
+                </div>
+                <div class="list-group" style="width: 50%;border-left: 1px solid gray;padding-left: 15px">
+                    <p>热门推荐：</p>
+                    <a href="{{.url4}}" style="color: gray">{{.link4}}</a>
+                    <a href="{{.url5}}" style="color: gray">{{.link5}}</a>
+                    <a href="{{.url6}}" style="color: gray">{{.link6}}</a>
+                </div>
+            </div>
+            <hr>
+            <div class="author" style="line-height:1.8;text-align:center;padding:50px 0;color:#999;">
+                Based on:
+                <a href="http://beego.me">beego.me</a> / Created by:
+                <a href="https://github.com/mad3hat">madhat</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</body>
+
+</html>

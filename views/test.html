@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+<link rel="stylesheet" type="text/css" href="/static/css/docs.css">
+<link rel="stylesheet" type="text/css" href="/static/css/xian.css">
+<script type="text/javascript">
+	function lispick0() {
+		document.getElementById("buttonok").style.display="none";
+		document.getElementById("colorpick").style.display="block";
+	}
+	function lispick1() {
+		document.getElementById("colorpick").style.display="none";
+		document.getElementById("colorred").style.display="block";
+	}
+	function lispick2() {
+		document.getElementById("colorpick").style.display="none";
+		document.getElementById("colorgreen").style.display="block";
+	}
+	function lispick3() {
+		document.getElementById("colorpick").style.display="none";
+		document.getElementById("colorblue").style.display="block";
+	}
+	function lispick4() {
+		document.getElementById("colorpick").style.display="none";
+		document.getElementById("colorpurple").style.display="block";
+	}
+	function lispick5() {
+		document.getElementById("colorpick").style.display="none";
+		document.getElementById("colororange").style.display="block";
+	}
+	function lispick6() {
+		document.getElementById("colorpick").style.display="none";
+		document.getElementById("colorgrey").style.display="block";
+	}
+</script>
+<title>心理测评</title>
+</head>
+<body>
+<div id="header" style="padding-top:10%;">
+	<h1>心理测评选题阶段</h1>
+</div>
+<div class="testcontent" id="colorpick">
+	<div class="testtitle">
+	如果你有一栋小木屋，你希望它在_______.
+	</div>
+	<div class="colorpick">
+		<ul>
+		<li><div class="buttonsea" onclick="lispick1()"><img src="/static/img/sea.png"><br />海边</div></li>
+		<li><div class="buttonisland" onclick="lispick2()"><img src="/static/img/island.png"><br />岛上</div></li>
+		<li><div class="buttoncity" onclick="lispick3()"><img src="/static/img/city.png"><br />城市</div></li>
+		<li><div class="buttonriver" onclick="lispick4()"><img src="/static/img/river.png"><br />小溪</div></li>
+		<li><div class="buttonforest" onclick="lispick5()"><img src="/static/img/forest.png"><br />森林</div></li>
+		</ul>
+	</div>
+</div>
+<!--海边测试开始-->
+<div class="testcontent" id="colorred" style="display:none;">
+	<div class="testtitle">
+	海边的小屋，是自由的向往，是梦想的起航，高高飞翔，你一定行。
+	</div>
+	<div class="colorpick">
+		<ul>
+		<li><div class="buttonsea"><img src="/static/img/sea.png"><br />海边</div></li>
+		</ul>
+		<a href="/v1/questions1" target="_self"><button class="btn btn-large btn-info">开始答题</button></a>
+	</div>
+</div>
+<!--小岛测试开始-->
+<div class="testcontent" id="colorgreen" style="display:none;">
+	<div class="testtitle">
+	岛上的小屋，是无人打扰的清净，你心中的那片净土，是非常珍贵的财富。
+	</div>
+	<div class="colorpick">
+		<ul>
+		<li><div class="buttonisland"><img src="/static/img/island.png"><br />岛上</div></li>
+		</ul>
+		<a href="/v1/questions2" target="_self"><button class="btn btn-large btn-info">开始答题</button></a>
+	</div>
+</div>
+<!--城市测试开始-->
+<div class="testcontent" id="colorblue" style="display:none;">
+	<div class="testtitle">
+	城市的小屋，是融入喧嚣的云彩，你热情、阳光的心，喜欢和朋友在一起。
+	</div>
+	<div class="colorpick">
+		<ul>
+		<li><div class="buttoncity"><img src="/static/img/city.png"><br />城市</div></li>
+		</ul>
+		<a href="/v1/questions3" target="_self"><button class="btn btn-large btn-info">开始答题</button></a>
+	</div>
+</div>
+<!--小溪测试开始-->
+<div class="testcontent" id="colorpurple" style="display:none;">
+	<div class="testtitle">
+	溪边的小屋，是田园生活的写意，愿你拥有一片草地，可以放肆的写下生命的灿烂。
+	</div>
+	<div class="colorpick">
+		<ul>
+		<li><div class="buttonriver"><img src="/static/img/river.png"><br />小溪</div></li>
+		</ul>
+		<a href="/v1/questions4" target="_self"><button class="btn btn-large btn-info">开始答题</button></a>
+	</div>
+</div>
+<!--森林测试开始-->
+<div class="testcontent" id="colororange" style="display:none;">
+	<div class="testtitle">
+	森林的小屋，是人与自然的包容，我猜你喜欢小动物，养只小猴子吧。
+	</div>
+	<div class="colorpick">
+		<ul>
+		<li><div class="buttonforest"><img src="/static/img/forest.png"><br />森林</div></li>
+		</ul>
+		<a href="/v1/questions5" target="_self"><button class="btn btn-large btn-info">开始答题</button></a>
+	</div>
+</div>
+
+</body>
+</html>

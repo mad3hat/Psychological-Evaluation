@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>心理测评网</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/v1/index">
+            <i class="fas fa-anchor"></i>
+        </a>
+        <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/v1/index">首页
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/v1/test">心理测评</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/v1/reading">拓展阅读</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">更多</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="/v1/login">切换账号</a>
+                        <a class="dropdown-item" href="/v1/about">关于本站</a>
+                    </div>
+                </li>
+            </ul>
+            <form action="/v1/myinfo" method="get">
+                <button type="submit" style="float: right;color: grey;text-decoration-line: none;border: none;background-color:rgba(253, 253, 253, 0)">我的信息</button>
+            </form>
+        </div>
+    </nav>
+    <br>
+    <br>
+
+    <div class="container">
+        <form action="/v1/change_info" method="post">
+            <h4>个人信息：</h4>
+            <hr>
+            <br>
+            <div class="container" style="width: 70%">
+                <div class="row">
+                    <div style="width: 25%;background-color: rgb(214, 213, 213);padding: 15px;margin: 15px;text-align: center">
+                        <b>姓名</b>
+                    </div>
+                    <div style="width: 60%;padding: 15px;border-bottom:  1px solid gray;margin: 15px">
+                        <input type="text" id="Name" name="Name" style="border: 0px;width: 100%" placeholder="{{.Name}}">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div style="width: 25%;background-color: rgb(214, 213, 213);padding: 15px;margin: 15px;text-align: center">
+                        <b>性别</b>
+                    </div>
+                    <div style="width: 60%;padding: 15px;border-bottom:  1px solid gray;margin: 15px">
+                        <input type="text" id="Sex" name="Sex" style="border: 0px;width: 100%" placeholder="{{.Sex}}">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div style="width: 25%;background-color: rgb(214, 213, 213);padding: 15px;margin: 15px;text-align: center">
+                        <b>年龄</b>
+                    </div>
+                    <div style="width: 60%;padding: 15px;border-bottom:  1px solid gray;margin: 15px">
+                        <input type="text" id="Age" name="Age" style="border: 0px;width: 100%" placeholder="{{.Age}}">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div style="width: 25%;background-color: rgb(214, 213, 213);padding: 15px;margin: 15px;text-align: center">
+                        <b>邮箱</b>
+                    </div>
+                    <div style="width: 60%;padding: 15px;border-bottom:  1px solid gray;margin: 15px">
+                        <input type="text" id="Email" name="Email" style="border: 0px;width: 100%" placeholder="{{.Email}}">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div style="width: 25%;background-color: rgb(214, 213, 213);padding: 15px;margin: 15px;text-align: center">
+                        <b>密码</b>
+                    </div>
+                    <div style="width: 60%;padding: 15px;border-bottom:  1px solid gray;margin: 15px">
+                        <input type="password" id="Password" name="Password" style="border: 0px;width: 100%" placeholder="{{.Password}}">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="container" style="width: 60%">
+                    <button type="submit" class="btn btn-primary" style="width: 100%">确认修改</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br>
+    <br>
+    <hr>
+
+    <footer>
+        <div class="container">
+            <div class="row clearfix">
+                <div class="list-group" style="width: 50%;border-left: 1px solid gray;padding-left: 15px">
+                    <p>友情链接：</p>
+                    <a href="{{.url1}}" style="color: gray">{{.link1}}</a>
+                    <a href="{{.url2}}" style="color: gray">{{.link2}}</a>
+                    <a href="{{.url3}}" style="color: gray">{{.link3}}</a>
+                </div>
+                <div class="list-group" style="width: 50%;border-left: 1px solid gray;padding-left: 15px">
+                    <p>热门推荐：</p>
+                    <a href="{{.url4}}" style="color: gray">{{.link4}}</a>
+                    <a href="{{.url5}}" style="color: gray">{{.link5}}</a>
+                    <a href="{{.url6}}" style="color: gray">{{.link6}}</a>
+                </div>
+            </div>
+            <hr>
+            <div class="author" style="line-height:1.8;text-align:center;padding:50px 0;color:#999;">
+                Based on:
+                <a href="http://beego.me">beego.me</a> / Created by:
+                <a href="https://github.com/mad3hat">madhat</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</body>
+
+</html>

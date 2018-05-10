@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>心理测评网</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <!-- Font-Awesome CSS -->
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/v1/index">
+            <i class="fas fa-anchor"></i>
+        </a>
+        <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/v1/index">首页
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/v1/test">心理测评</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/v1/reading">拓展阅读</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">更多</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="/v1/login">切换账号</a>
+                        <a class="dropdown-item" href="/v1/about">关于本站</a>
+                    </div>
+                </li>
+            </ul>
+            <form action="/v1/myinfo" method="get">
+                <button type="submit" style="float: right;color: grey;text-decoration-line: none;border: none;background-color:rgba(253, 253, 253, 0)">我的信息</button>
+            </form>
+        </div>
+    </nav>
+    <br>
+    <br>
+
+    <div class="container" style="border: outset;padding: 70px">
+        <h2>
+            <i class="fas fa-align-right"></i> 关于</h2>
+        <hr>
+        <p>随着社会进步，生活工作压力增加，患有心理疾病的人群也在逐年扩大。 心理评测网站具有标准心理评测网站所需要的完整步骤，完全的摸拟了现实情况。 真正做到了节约的资源、提高了效率、在业务处理时真正实现了心理评测网站的功能与作用。
+        </p>
+        <br>
+        <h3 style="color: gray">心理测评</h3>
+        <br>
+        <p>
+            <a href="https://baike.baidu.com/item/%E5%BF%83%E7%90%86%E6%B5%8B%E8%AF%84/716910?fr=aladdin">心理测评</a>
+            英语称为Psychological Evaluation Software，是依据一定的心理学理论，使用一定的操作程序， 给人的能力、人格及心理健康等心理特性和行为确定出一种数量化的价值。
+        </p>
+        <br>
+        <h3 style="color: gray">心理知识</h3>
+        <br>
+        <p>如果你想了解更多有趣的心理知识，欢迎访问
+            <a href="https://http://www.jiandanxinli.com/knowledge">简单心理</a>。</p>
+        <br>
+        <h3 style="color: gray">问题提交</h3>
+        <br>
+        <p>如果你在使用该网站的过程中遇到任何的问题，欢迎提交到我的
+            <a href="https://http://www.jiandanxinli.com/knowledge">GitHub</a>
+            页面，我会尽量即时进行反馈。</p>
+        <br>
+        <h3 style="color: gray">网站源码</h3>
+        <br>
+        <p>网站源码请移步
+            <a href="https://http://www.jiandanxinli.com/knowledge">这里</a>。</p>
+    </div>
+
+
+    <br>
+    <br>
+    <hr>
+    <footer>
+        <div class="container">
+            <div class="row clearfix">
+                <div class="list-group" style="width: 50%;border-left: 1px solid gray;padding-left: 15px">
+                    <p>友情链接：</p>
+                    <a href="{{.url1}}" style="color: gray">{{.link1}}</a>
+                    <a href="{{.url2}}" style="color: gray">{{.link2}}</a>
+                    <a href="{{.url3}}" style="color: gray">{{.link3}}</a>
+                </div>
+                <div class="list-group" style="width: 50%;border-left: 1px solid gray;padding-left: 15px">
+                    <p>热门推荐：</p>
+                    <a href="{{.url4}}" style="color: gray">{{.link4}}</a>
+                    <a href="{{.url5}}" style="color: gray">{{.link5}}</a>
+                    <a href="{{.url6}}" style="color: gray">{{.link6}}</a>
+                </div>
+            </div>
+            <hr>
+            <div class="author" style="line-height:1.8;text-align:center;padding:50px 0;color:#999;">
+                Based on:
+                <a href="http://beego.me">beego.me</a> / Created by:
+                <a href="https://github.com/mad3hat">madhat</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</body>
+
+</html>

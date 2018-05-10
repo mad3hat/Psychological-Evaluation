@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>心理测评网</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="/v1/index">
+			<i class="fas fa-anchor"></i>
+		</a>
+		<button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+		 aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="collapsibleNavId">
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+				<li class="nav-item active">
+					<a class="nav-link" href="/v1/index">首页
+						<span class="sr-only">(current)</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/v1/test">心理测评</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/v1/reading">拓展阅读</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">更多</a>
+					<div class="dropdown-menu" aria-labelledby="dropdownId">
+						<a class="dropdown-item" href="/v1/login">切换账号</a>
+						<a class="dropdown-item" href="/v1/about">关于本站</a>
+					</div>
+				</li>
+			</ul>
+			<form action="/v1/myinfo" method="get">
+				<button type="submit" style="float: right;color: grey;text-decoration-line: none;border: none;background-color:rgba(253, 253, 253, 0)">我的信息</button>
+			</form>
+		</div>
+	</nav>
+
+	<br>
+	<div class="container">
+
+		<div class="container-fluid" style="text-align: center;background-color: rgba(15, 166, 236, 0.918);height: 140%">
+			<h1 class="display-4">心理测评</h1>
+		</div>
+		<!-- action="/v1/answer1" method="get" -->
+		<form action="/v1/answer" method="POST">
+			<div class="container-fluid" style="background-color: #ffc400">
+				<div>1.{{.Question5}}</div>
+				<div>
+					<input type="radio" name="ques1" value="1" />
+					<label>A. </label>{{.A5}}
+					<br>
+					<input type="radio" name="ques1" value="2" />
+					<label>B. </label>{{.B5}}
+					<br>
+					<input type="radio" name="ques1" value="3" />
+					<label>C. </label>{{.C5}}
+					<br>
+					<input type="radio" name="ques1" value="4" />
+					<label>D. </label>{{.D5}}
+				</div>
+			</div>
+
+			<div class="container-fluid" style="background-color: #e2b111f3">
+				<div>2.{{.Question6}}</div>
+				<div>
+					<input type="radio" name="ques2" value="1" />
+					<label>A. </label>{{.A6}}
+					<br>
+					<input type="radio" name="ques2" value="2" />
+					<label>B. </label>{{.B6}}
+					<br>
+					<input type="radio" name="ques2" value="3" />
+					<label>C. </label>{{.C6}}
+					<br>
+					<input type="radio" name="ques2" value="4" />
+					<label>D. </label>{{.D6}}
+				</div>
+			</div>
+
+			<div class="container-fluid " style="background-color:#caa017d3">
+				<div>3.{{.Question7}}</div>
+				<div>
+					<input type="radio" name="ques3" value="1" />
+					<label>A. </label>{{.A7}}
+					<br>
+					<input type="radio" name="ques3" value="2" />
+					<label>B. </label>{{.B7}}
+					<br>
+					<input type="radio" name="ques3" value="3" />
+					<label>C. </label>{{.C7}}
+					<br>
+					<input type="radio" name="ques3" value="4" />
+					<label>D. </label>{{.D7}}
+				</div>
+			</div>
+
+			<div class="container-fluid" style="background-color:#ac8a1baf">
+				<div>4.{{.Question8}}</div>
+				<div>
+					<input type="radio" name="ques4" value="1" />
+					<label>A. </label>{{.A8}}
+					<br>
+					<input type="radio" name="ques4" value="2" />
+					<label>B. </label>{{.B8}}
+					<br>
+					<input type="radio" name="ques4" value="3" />
+					<label>C. </label>{{.C8}}
+					<br>
+					<input type="radio" name="ques4" value="4" />
+					<label>D. </label>{{.D8}}
+				</div>
+			</div>
+
+			<div class="container" style="background-color: rgb(153, 255, 0)">
+				<div>5.{{.Question9}}</div>
+				<div>
+					<input type="radio" name="ques5" value="1" />
+					<label>A. </label>{{.A9}}
+					<br>
+					<input type="radio" name="ques5" value="2" />
+					<label>B. </label>{{.B9}}
+					<br>
+					<input type="radio" name="ques5" value="3" />
+					<label>C. </label>{{.C9}}
+					<br>
+					<input type="radio" name="ques5" value="4" />
+					<label>D. </label>{{.D9}}
+				</div>
+			</div>
+
+			<div class="container" style="background-color:rgba(143, 231, 10, 0.897)">
+				<div>6.{{.Question10}}</div>
+				<div>
+					<input type="radio" name="ques6" value="1" />
+					<label>A. </label>{{.A10}}
+					<br>
+					<input type="radio" name="ques6" value="2" />
+					<label>B. </label>{{.B10}}
+					<br>
+					<input type="radio" name="ques6" value="3" />
+					<label>C. </label>{{.C10}}
+					<br>
+					<input type="radio" name="ques6" value="4" />
+					<label>D. </label>{{.D10}}
+				</div>
+			</div>
+
+			<div class="container" style="background-color: rgba(129, 206, 14, 0.774)">
+				<div>7.{{.Question11}}</div>
+				<div>
+					<input type="radio" name="ques7" value="1" />
+					<label>A. </label>{{.A11}}
+					<br>
+					<input type="radio" name="ques7" value="2" />
+					<label>B. </label>{{.B11}}
+					<br>
+					<input type="radio" name="ques7" value="3" />
+					<label>C. </label>{{.C11}}
+					<br>
+					<input type="radio" name="ques7" value="4" />
+					<label>D. </label>{{.D11}}
+				</div>
+			</div>
+
+			<div class="container" style="background-color: rgba(117, 182, 20, 0.644)">
+				<div>8.{{.Question12}}</div>
+				<div>
+					<input type="radio" name="ques8" value="1" />
+					<label>A. </label>{{.A12}}
+					<br>
+					<input type="radio" name="ques8" value="2" />
+					<label>B. </label>{{.B12}}
+					<br>
+					<input type="radio" name="ques8" value="3" />
+					<label>C. </label>{{.C12}}
+					<br>
+					<input type="radio" name="ques8" value="4" />
+					<label>D. </label>{{.D12}}
+				</div>
+			</div>
+
+			<div class="container" style="background-color: rgba(146, 56, 231, 0.801)">
+				<div>9.{{.Question13}}</div>
+				<div>
+					<input type="radio" name="ques9" value="1" />
+					<label>A. </label>{{.A13}}
+					<br>
+					<input type="radio" name="ques9" value="2" />
+					<label>B. </label>{{.B13}}
+					<br>
+					<input type="radio" name="ques9" value="3" />
+					<label>C. </label>{{.C13}}
+					<br>
+					<input type="radio" name="ques9" value="4" />
+					<label>C. </label>{{.D13}}
+				</div>
+			</div>
+
+			<div class="container" style="background-color: rgba(155, 67, 238, 0.747)">
+				<div>10.{{.Question14}}</div>
+				<div>
+					<input type="radio" name="ques10" value="1" />
+					<label>A. </label>{{.A14}}
+					<br>
+					<input type="radio" name="ques10" value="2" />
+					<label>B. </label>{{.B14}}
+					<br>
+					<input type="radio" name="ques10" value="3" />
+					<label>C. </label>{{.C14}}
+					<br>
+					<input type="radio" name="ques10" value="4" />
+					<label>D. </label>{{.D14}}
+				</div>
+			</div>
+			<br>
+			<button type="submit" class="btn btn-primary" onclick="confirm('确定要交卷吗？')">我要交卷</button>
+
+		</form>
+	</div>
+	<br>
+	<br>
+	<hr>
+    <footer>
+        <div class="container">
+            <div class="row clearfix">
+                <div class="list-group" style="width: 50%;border-left: 1px solid gray;padding-left: 15px">
+                    <p>友情链接：</p>
+                    <a href="{{.url1}}" style="color: gray">{{.link1}}</a>
+                    <a href="{{.url2}}" style="color: gray">{{.link2}}</a>
+                    <a href="{{.url3}}" style="color: gray">{{.link3}}</a>
+                </div>
+                <div class="list-group" style="width: 50%;border-left: 1px solid gray;padding-left: 15px">
+                    <p>热门推荐：</p>
+                    <a href="{{.url4}}" style="color: gray">{{.link4}}</a>
+                    <a href="{{.url5}}" style="color: gray">{{.link5}}</a>
+                    <a href="{{.url6}}" style="color: gray">{{.link6}}</a>
+                </div>
+            </div>
+            <hr>
+            <div class="author" style="line-height:1.8;text-align:center;padding:50px 0;color:#999;">
+                Based on:
+                <a href="http://beego.me">beego.me</a> / Created by:
+                <a href="https://github.com/mad3hat">madhat</a>
+            </div>
+        </div>
+    </footer>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	 crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	 crossorigin="anonymous"></script>
+</body>
+
+</html>
